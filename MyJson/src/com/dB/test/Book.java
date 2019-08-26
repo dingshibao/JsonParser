@@ -2,6 +2,7 @@ package com.dB.test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Book {
@@ -15,6 +16,21 @@ public class Book {
 
 	String info;
 	
+	String[] array;
+	
+	int[] ar = {1,2,3};
+	
+	public int[] getAr() {
+		return ar;
+	}
+
+
+	public void setAr(int[] ar) {
+		this.ar = ar;
+	}
+
+
+	HashMap<String, Integer> map = new HashMap<String, Integer>();
 	public void addAuthor(String author) {
 		authors.add(author);
 	}
@@ -24,6 +40,13 @@ public class Book {
 	public Book() {
 		// TODO Auto-generated constructor stub
 		price = new BigDecimal(0);
+		array = new String[3];
+		for (int i = 0; i < array.length; i++) {
+			array[i] = "i";
+		}
+		map.put("1", 1);
+		map.put("2", 2);
+		
 	}
 
 	public Book(int id, String title, double price) {
@@ -32,6 +55,27 @@ public class Book {
 		this.title = title;
 		this.price = new BigDecimal(price);
 	}
+
+	
+	public String[] getArray() {
+		return array;
+	}
+
+
+	public void setArray(String[] array) {
+		this.array = array;
+	}
+
+
+	public HashMap<String, Integer> getMap() {
+		return map;
+	}
+
+
+	public void setMap(HashMap<String, Integer> map) {
+		this.map = map;
+	}
+
 
 	public int getId() {
 		return id;

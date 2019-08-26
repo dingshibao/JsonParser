@@ -13,4 +13,14 @@ public class BookList {
 	public void add(Book book) {
 		list.add(book);
 	}
+
+	public ArrayList<Book> getList() {
+		return list;
+	}
+
+	public void setList(ArrayList<Book> list) {
+		this.list = list;
+	}
+	
+	
 }
