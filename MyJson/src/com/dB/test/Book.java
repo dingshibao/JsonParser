@@ -2,8 +2,10 @@ package com.dB.test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Book {
 	int id;
@@ -20,20 +22,12 @@ public class Book {
 	
 	int[] ar = {1,2,3};
 	
-	public int[] getAr() {
-		return ar;
-	}
+	Map<String, Integer> map = new HashMap<String, Integer>();
+	
 
 
-	public void setAr(int[] ar) {
-		this.ar = ar;
-	}
 
-
-	HashMap<String, Integer> map = new HashMap<String, Integer>();
-	public void addAuthor(String author) {
-		authors.add(author);
-	}
+	
 	
 	
 	// ÎÞ²ÎÊý
@@ -56,25 +50,11 @@ public class Book {
 		this.price = new BigDecimal(price);
 	}
 
+	public void addAuthor(String author) {
+		authors.add(author);
+	}
 	
-	public String[] getArray() {
-		return array;
-	}
 
-
-	public void setArray(String[] array) {
-		this.array = array;
-	}
-
-
-	public HashMap<String, Integer> getMap() {
-		return map;
-	}
-
-
-	public void setMap(HashMap<String, Integer> map) {
-		this.map = map;
-	}
 
 
 	public int getId() {
@@ -101,32 +81,54 @@ public class Book {
 		this.price = price;
 	}
 
-	
-
 	public List<String> getAuthors() {
 		return authors;
 	}
-
 
 	public void setAuthors(List<String> authors) {
 		this.authors = authors;
 	}
 
-
 	public String getInfo() {
 		return info;
 	}
-
 
 	public void setInfo(String info) {
 		this.info = info;
 	}
 
+	public String[] getArray() {
+		return array;
+	}
+
+	public void setArray(String[] array) {
+		this.array = array;
+	}
+
+	public int[] getAr() {
+		return ar;
+	}
+
+	public void setAr(int[] ar) {
+		this.ar = ar;
+	}
+
+	public Map<String, Integer> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, Integer> map) {
+		this.map = map;
+	}
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", price=" + price + ", authors=" + authors + ", info=" + info + "]";
+		return "Book [id=" + id + ", title=" + title + ", price=" + price + ", authors=" + authors + ", info=" + info
+				+ ", array=" + Arrays.toString(array) + ", ar=" + Arrays.toString(ar) + ", map=" + map + "]";
 	}
+
+
+
 	
 	
 }
